@@ -1,27 +1,50 @@
 import Menu from "../components/Menu";
+import styles from '../page.css'
 
 export default function Servicios () {
     return (
         <div>
-            <Menu/>
-            <center><article>
-    <h1>mecanica general</h1>
-    <p>trabajamos todo tipo de vehiuclo, tanto Diesel como Gasolina, en todos sus sitemas. </p>
-    <h1>latoneria y pintura</h1>
-    <p>reparaciones de choques, abolladuras, desgaste de la pintura por el sol, con todo
-        marca de vehiculo.
-    </p>
-    <h1>diagnostico computarizado</h1>
-    <p>servicio de escaner computarizado, diagnostico certero.</p>
-    <h1>reprogramaciones</h1>
-    <p>Hp tunners, Winol, modificaciones, Can.</p>
-</article> </center>
+            <Menu />
+            
+            <section className="services-section">
+                <div className="container">
+                    <h1 className="section-title">Nuestros Servicios</h1>
+                    
+                    <div className="services-grid">
+                        <div className="service-card">
+                            <h2 className="service-title">Mecánica General</h2>
+                            <p className="service-description">
+                                Trabajamos todo tipo de vehículo, tanto Diesel como Gasolina, en todos sus sistemas.
+                            </p>
+                        </div>
 
-      <center>
-        <nav>
-            <a href="trabajo especial de grado.html">volver al inicio</a>
-        </nav> 
-    </center>
+                        <div className="service-card">
+                            <h2 className="service-title">Latonería y Pintura</h2>
+                            <p className="service-description">
+                                Reparaciones de choques, abolladuras y desgaste de pintura por el sol, para todas las marcas.
+                            </p>
+                        </div>
+
+                        <div className="service-card">
+                            <h2 className="service-title">Diagnóstico Computarizado</h2>
+                            <p className="service-description">
+                                Servicio de escáner computarizado con diagnóstico certero y preciso.
+                            </p>
+                        </div>
+
+                        <div className="service-card">
+                            <h2 className="service-title">Reprogramaciones</h2>
+                            <p className="service-description">
+                                HP Tuners, WinOLS, modificaciones y actualizaciones de sistemas CAN.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="action-buttons">
+                        <a href="/" className="btn primary-btn">Volver al inicio</a>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }

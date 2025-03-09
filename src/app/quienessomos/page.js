@@ -1,16 +1,41 @@
 import Menu from "../components/Menu";
+import styles from "../page.css";
 
 export default function QuieneSomos() {
     return (
-        <div>
-            <Menu/>
-        <center> <header> <h1>Somos un taller mecanico, especialistas en mecanica general, ligera y pesada, 
-        tambien trabajamos con todo tipo de vehiculo, tanto Diesel como Otto. 
-        Nuestro deber es entregarle un excelente trabajo y brindarle la mejor atencion en todos
-        nuestros servicios.</h1> </header> 
-        <nav>
-            <a href="trabajo especial de grado.html">volver al inicio</a>
-        </nav> </center>
+<div>
+            <Menu />
+            <div className="banner">
+            <section className="about-section">
+                <div className="container">
+                    <h1 className="section-title">¿Quiénes Somos?</h1>
+                    
+                    <div className="about-content">
+                        <p className="lead-text">
+                            Somos un taller mecánico especializado en mecánica general, ligera y pesada.
+                            Trabajamos con todo tipo de vehículos, tanto Diesel como Otto.
+                        </p>
+                        <p className="description-text">
+                            Nuestro compromiso es ofrecer un servicio de excelencia, garantizando:
+                        </p>
+                        
+                        <ul className="features-list">
+                            <li>Diagnóstico preciso y soluciones efectivas</li>
+                            <li>Atención personalizada</li>
+                            <li>Tecnología de última generación</li>
+                            <li>Repuestos de calidad garantizada</li>
+                        </ul>
+                    </div>
+
+                    <div className="action-buttons">
+                        <a href="/" className="btn primary-btn">Volver al inicio</a>
+                        <a href="/contactos" className="btn secondary-btn">Contáctanos</a>
+                    </div>
+                </div>
+            </section>
+
+            </div>
+ 
         </div>
     )
 }

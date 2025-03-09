@@ -1,0 +1,119 @@
+/* Estilos para la sección Quienes Somos */
+.about-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--text-light);
+    width: '100%';
+}
+
+.about-section {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.6) 70%
+    );
+    z-index: 1;
+}
+
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lead-text {
+    font-size: 2rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.description-text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.features-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.features-list li:hover {
+    transform: translateY(-5px);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.secondary-btn {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+}
