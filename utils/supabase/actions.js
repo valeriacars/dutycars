@@ -11,7 +11,7 @@ const signInWith = provider => async () => {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider,
     options: {
-      redirectTo: '/',
+      redirectTo: auth_callback_url,
     },
   })
 
