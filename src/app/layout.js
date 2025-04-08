@@ -17,6 +17,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
@@ -29,6 +31,7 @@ export default function RootLayout({ children }) {
               agent-id="b5c6507a-b8ce-4e25-a689-39a44d3bab72"
               language-code="es"
             ></df-messenger>
+            
 
         {children}
       </body>

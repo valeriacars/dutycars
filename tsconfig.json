@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/components/Menu.js", "utils/supabase/client.ts", "utils/supabase/actions.ts", "middleware.js", "utils/supabase/server.js"  ],
+, "src/app/components/Menu.js", "utils/supabase/client.js", "utils/supabase/actions.js", "src/middleware.js", "utils/supabase/server.js"  ],
   "exclude": [
     "node_modules"
   ]
