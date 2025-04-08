@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation'
 const signInWith = provider => async () => {
   const supabase = await createClientForServer()
 
-  const auth_callback_url = `${process.env.SITE_URL}/auth/callback`
+  const auth_callback_url = 'https://dutycars.vercel.app/auth/callback'
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider,
