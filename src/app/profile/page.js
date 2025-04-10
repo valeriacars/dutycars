@@ -5,6 +5,11 @@ import createClientForBrowser from '../../../utils/supabase/client';
 import Menu from '../components/Menu';
 import styles from "../page.css";
 import VehiculoList from '../components/VehiculoCard';
+import Estatus from '../components/Estatus';
+import Agendar from '../components/Agendar';
+import Presupuesto from '../components/Presupuesto';
+import Experiencia from '../components/Experiencia';
+import Dashboard from '../components/Dashboard';
 
 export default function Profile() {
   const [user, setUser] = useState(null);
@@ -80,6 +85,7 @@ export default function Profile() {
        
   </div>
   <VehiculoList/>
+  <Dashboard/>     
 </div>
 </>
   );

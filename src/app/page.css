@@ -885,3 +885,450 @@ body {
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
   }
+
+  /*Estatus Vehiculo*/
+
+  .vehicle-status-static {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .status-title {
+    color: var(--accent-color);
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .status-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .status-section {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    color: var(--text-light);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .status-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  .status-label {
+    font-weight: 500;
+  }
+  
+  .status-value {
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 5px;
+  }
+  
+  .status-value.pending {
+    background: rgba(255, 69, 0, 0.2);
+    color: #FF4500;
+  }
+  
+  .status-value.completed {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00FF00;
+  }
+  
+  @media (max-width: 600px) {
+    .status-title {
+      font-size: 1.5rem;
+    }
+  
+    .section-title {
+      font-size: 1.1rem;
+    }
+  }
+
+  /* Agendar */
+
+  .appointment-form-static {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--text-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-title {
+    color: var(--accent-color);
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .form-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .form-section {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    color: var(--text-light);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-field label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-field input,
+  .form-field select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 0.75rem;
+    color: var(--text-light);
+    font-size: 1rem;
+    cursor: not-allowed;
+  }
+  
+  .form-field input:focus,
+  .form-field select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .submit-button {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 25px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 600px) {
+    .form-title {
+      font-size: 1.5rem;
+    }
+  
+    .section-title {
+      font-size: 1.1rem;
+    }
+  }
+
+  /* presupuesto */
+
+  .vehicle-budget-static {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--text-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .budget-title {
+    color: var(--accent-color);
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .budget-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .budget-section {
+    margin-bottom: 2rem;
+  }
+  
+  .budget-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  .item-label {
+    font-weight: 500;
+  }
+  
+  .item-value {
+    font-weight: 600;
+  }
+  
+  .total .item-label {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+  }
+  
+  .total .item-value {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+  }
+  
+  .budget-note {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .budget-title {
+      font-size: 1.5rem;
+    }
+  
+    .total .item-label,
+    .total .item-value {
+      font-size: 1.1rem;
+    }
+  }
+
+  /* Experiencia */
+
+  .rate-experience-static {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--text-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .experience-title {
+    color: var(--accent-color);
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .experience-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .rating-section {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .rating-label {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  
+  .star-rating {
+    font-size: 2rem;
+  }
+  
+  .star {
+    cursor: not-allowed;
+    transition: color 0.3s ease;
+  }
+  
+  .star.filled {
+    color: var(--primary-color);
+  }
+  
+  .star:not(.filled) {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .comment-section {
+    margin-bottom: 2rem;
+  }
+  
+  .comment-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .comment-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 1rem;
+    color: var(--text-light);
+    font-size: 1rem;
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    cursor: not-allowed;
+  }
+  
+  .submit-button {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 25px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 600px) {
+    .experience-title {
+      font-size: 1.5rem;
+    }
+  
+    .rating-label {
+      font-size: 1rem;
+    }
+  }
+
+  /* Dashboard */
+
+  .dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--text-light);
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sidebar-title {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-item {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+  }
+  
+  .menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .menu-item.active {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  /* Contenido Principal */
+  .content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 1rem;
+    }
+  
+    .menu-list {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    .menu-item {
+      flex: 1;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+  }

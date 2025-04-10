@@ -20,18 +20,6 @@ export default function VehiculoList() {
       icon: <FaCar size={48} color="#FFD700" />,
       model: "Toyota Corolla",
       plate: "AG123BC"
-    },
-    {
-      id: 2,
-      icon: <FaTruck size={48} color="#FF6600" />,
-      model: "Ford F-150",
-      plate: "XE456YZ"
-    },
-    {
-      id: 3,
-      icon: <FaCar size={48} color="#00FF00" />,
-      model: "CHEVROLET AVEO",
-      plate: "MW789NB"
     }
   ];
 
