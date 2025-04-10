@@ -1,14 +1,15 @@
-'use client'; 
+'use client';
 
 import Link from "next/link";
 import Image from "next/image";
 import Google from "../image/google.png";
 import { useEffect, useState } from "react";
-import  createClientForBrowser  from "../../../utils/supabase/client";
+import createClientForBrowser from "../../../utils/supabase/client";
 import { signinWithGoogle } from "../../../utils/supabase/actions";
 
 export default function Menu() {
   const [user, setUser] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú hamburguesa
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -44,12 +45,16 @@ export default function Menu() {
     }
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Alternar el estado del menú
+  };
+
   return (
     <>
       <header className="site-header">
         <div className="nav-container">
           <div className="logo">Duty Cars C.A.</div>
-          <nav className="main-nav">
+          <nav className={`main-nav ${isMenuOpen ? 'active' : ''}`}>
             <ul className="nav-menu" id="nav-menu">
               <li>
                 <Link href="/">Inicio</Link>
@@ -67,7 +72,6 @@ export default function Menu() {
                 <Link href="/contactos">Contacto</Link>
               </li>
               {user ? (
-                // Si el usuario está autenticado, muestra el enlace al perfil y el botón de cierre de sesión
                 <>
                   <li>
                     <Link href="/profile">Perfil</Link>
@@ -79,7 +83,6 @@ export default function Menu() {
                   </li>
                 </>
               ) : (
-                // Si el usuario no está autenticado, muestra el botón de inicio de sesión con Google
                 <li>
                   <form>
                     <button formAction={signinWithGoogle} className="google-button">
@@ -91,7 +94,7 @@ export default function Menu() {
               )}
             </ul>
           </nav>
-          <div className="menu-toggle" id="menu-toggle">
+          <div className="menu-toggle" id="menu-toggle" onClick={toggleMenu}>
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
